@@ -1,26 +1,46 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
+import Navigation from './components/Navigation/Navigation';
+import About from './components/About/About';
+import Blog from './components/Blog/Blog';
+import Portfolio from './components/Portfolio/Portfolio';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+
+
+
+class App extends Component {
+
+  constructor() {
+    super();
+    this.state = {
+      input: '',
+      route: 'About'
+    }
+  }
+
+  onRouteChange = (route) => {
+    this.setState({route: route});
+  }
+
+  render() {
+    return (
+      <div className="App">
+        { this.state.route === 'About'
+          ? <About onRouteChange={this.onRouteChange} />
+          :  this.state.route === 'Blog'
+          ? <Blog onRouteChange={this.onRouteChange} />
+          : ( this.state.route === 'Portfolio'
+            ? <Portfolio onRouteChange={this.onRouteChange} />
+            : <div>
+            </div>
+          )
+        }
+        <Navigation 
+          onRouteChange={this.onRouteChange} 
+        />
+      </div>
+    );
+  }
 }
-
 export default App;
