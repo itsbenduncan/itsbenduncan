@@ -4,7 +4,7 @@ import Navigation from './components/Navigation/Navigation';
 import About from './components/About/About';
 import Blog from './components/Blog/Blog';
 import Portfolio from './components/Portfolio/Portfolio';
-
+import { motion } from 'framer-motion';
 
 
 

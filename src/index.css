@@ -3,10 +3,9 @@ body, html {
   font-family: 'Raleway', sans-serif;
   /* font-family: 'Nunito', sans-serif; */
 
+  display: grid;
   grid-template-rows: 150px auto;
+  background-image: url("nav-background.png");
+  background-size: 100%;
+  background-repeat: repeat-y;
 }
-
-/* code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-} */

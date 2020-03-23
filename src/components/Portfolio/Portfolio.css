@@ -1,0 +1,8 @@
+.portfolio-container {
+    position: relative;
+    top: 200px;
+    
+    display: grid;
+    grid-template-columns: 10% auto 10% auto 10%;
+    grid-template-rows: auto auto 10% auto;
+}

@@ -1,36 +1,85 @@
 .about-container {
-    position: relative;
-    top: 200px;
     grid-row-start: 2;
-    
+    margin-top: 175px;
+    background-color: transparent;
+    /* border-top: 2px solid grey; */
+
     display: grid;
-    grid-template-columns: 20% 60% 20%;
-    grid-gap: 50px;
-    
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: 20% 75% 5%;
+}
+
+.big-words {
+    grid-row-start: 2;
+    grid-column-start: 2;
+
+    display: grid;
+    grid-template-rows: 60% 20% 20%;
+}
+
+#i-am {
+    grid-row-start: 1;
+
+    align-self: center;
+
+    font-size: 12em;
+    font-weight: 900;
     text-align: left;
 }
 
-.about-title {
-    font-family: 'Nunito', sans-serif;
-    font-size: 2.5em;
-    grid-column-start: 2;
-
-    margin-bottom: -1em;
+#headshot {
+    height: 140px;
+    width: 135px;
 }
 
-.about-subtitle {
-    font-family: 'Nunito', sans-serif;
-    font-size: 3.5em;
-    grid-column-start: 2;
+#a-developer {
+    grid-row-start: 2;
 
-    margin-bottom: -0.75em;
+    align-self: center;
+
+    font-size: 5em;
+    font-weight: 900;
+    text-align: left;
 }
 
-.main-content {
+#research-scientist {
+    grid-row-start: 3;
+
+    align-self: center;
+    padding-top: 30px;
+
+    font-size: 4em;
+    font-weight: 900;
+    text-align: left;
+}
+
+.skills-container {
     grid-column-start: 2;
-    margin-left: 50px;
-    font-size: 1.75em;
-    text-align: justify;
-    
-    list-style-type: none;
+    grid-row-start: 3;
+    margin-top: 50px;
+
+    font-weight: 900;
+    font-size: 1.1em;
+}
+
+.social-icons {
+    grid-column-start: 3;
+    grid-row-start: 2;
+
+    align-self: center;
+    margin-left: -100px;
+    margin-top: 50px;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.social {
+    height: 100px;
+    width: 100px;
+}
+
+.social:hover {cursor: grab;}
+
+.social:active {
+    cursor: grabbing;
 }
