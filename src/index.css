@@ -8,4 +8,5 @@ body, html {
   background-image: url("nav-background.png");
   background-size: 100%;
   background-repeat: repeat-y;
+  color: #222831;
 }

@@ -4,10 +4,7 @@ import Navigation from './components/Navigation/Navigation';
 import About from './components/About/About';
 import Blog from './components/Blog/Blog';
 import Portfolio from './components/Portfolio/Portfolio';
-import { motion } from 'framer-motion';
-
-
-
+// import { motion } from 'framer-motion';
 
 class App extends Component {
 
@@ -15,7 +12,7 @@ class App extends Component {
     super();
     this.state = {
       input: '',
-      route: 'About'
+      route: 'About',
     }
   }
 

@@ -16,7 +16,7 @@ const About = () => {
                     transition={{ delay: 0, duration: .75 }} >
                         I AM
 
-                        <motion.img src={benduncan} id="headshot"
+                        <motion.img src={benduncan} alt="ben duncan headshot" id="headshot"
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ delay: 1.5, duration: .5 }}
@@ -42,9 +42,9 @@ const About = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 3.25, duration: .5 }} >
-                    <img src={ twitter } className="social"></img><br/>
-                    <img src={ github } className="social"></img><br/>
-                    <img src={ instagram } className="social"></img>
+                    <img src={ twitter } alt="twitter icon" className="social" id="social1"></img>
+                    <img src={ github } alt="github icon" className="social" id="social2"></img>
+                    <img src={ instagram } alt="instagram icon" className="social" id="social3"></img>
             </motion.div>
 
             {/* <motion.div className="skills-container"

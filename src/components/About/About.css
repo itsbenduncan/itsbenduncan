@@ -1,85 +1,195 @@
-.about-container {
-    grid-row-start: 2;
-    margin-top: 175px;
-    background-color: transparent;
-    /* border-top: 2px solid grey; */
+/* 
+Needs media query at 1300px width to a smaller format
+Then needs smaller query for mobile format
+*/
 
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    grid-template-rows: 20% 75% 5%;
+@media only screen and (min-width: 800px) {
+    .about-container {
+        grid-row-start: 2;
+        margin-top: 175px;
+        background-color: transparent;
+        /* border-top: 2px solid grey; */
+
+        display: grid;
+        grid-template-columns: 25% 50% 15% 10%;
+        grid-template-rows: 20% 75% 5%;
+    }
+
+    .big-words {
+        grid-row-start: 2;
+        grid-column-start: 2;
+
+        display: grid;
+        grid-template-rows: 60% 20% 20%;
+    }
+
+    #i-am {
+        grid-row-start: 1;
+
+        align-self: center;
+
+        font-size: 12em;
+        font-weight: 900;
+        text-align: left;
+    }
+
+    #headshot {
+        height: 140px;
+        width: 135px;
+    }
+
+    #a-developer {
+        grid-row-start: 2;
+
+        align-self: center;
+
+        font-size: 5em;
+        font-weight: 900;
+        text-align: left;
+    }
+
+    #research-scientist {
+        grid-row-start: 3;
+
+        align-self: center;
+        padding-top: 30px;
+
+        font-size: 4em;
+        font-weight: 900;
+        text-align: left;
+    }
+
+    .skills-container {
+        grid-column-start: 2;
+        grid-row-start: 3;
+        margin-top: 50px;
+
+        font-weight: 900;
+        font-size: 1.1em;
+    }
+
+    .social-icons {
+        grid-column-start: 3;
+        grid-row-start: 2;
+
+        align-self: center;
+        margin-left: -100px;
+        margin-top: 50px;
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+
+    .social {
+        height: 100px;
+        width: 100px;
+    }
+
+    .social:hover {cursor: grab;}
+
+    .social:active {
+        cursor: grabbing;
+    }
 }
 
-.big-words {
-    grid-row-start: 2;
-    grid-column-start: 2;
+/*
+*************************************
+*   EVERYTHING BELOW IS FOR MOBILE  *
+*************************************
+*/
 
-    display: grid;
-    grid-template-rows: 60% 20% 20%;
-}
+@media only screen and (max-width: 800px) {
+    .about-container {
+        grid-row-start: 2;
+        margin-top: 225px;
+        background-color: transparent;
+        /* border-top: 2px solid grey; */
+    
+        display: grid;
+        grid-template-columns: 5% 90% 5%;
+        grid-template-rows: 5% 70% 20% 5%;
+    }
+    
+    .big-words {
+        grid-row-start: 2;
+        grid-column-start: 2;
+        justify-self: center;
+        align-self: center;
+    
+        display: grid;
+        grid-template-rows: 60% 20% 20%;
+    }
+    
+    #i-am {
+        grid-row-start: 1;
+    
+        align-self: center;
+    
+        font-size: 5em;
+        font-weight: 900;
+        text-align: left;
+    }
+    
+    #headshot {
+        height: 60px;
+        width: 58px;
+    }
+    
+    #a-developer {
+        grid-row-start: 2;
+    
+        align-self: center;
+    
+        font-size: 2.12em;
+        font-weight: 900;
+        text-align: left;
+    }
+    
+    #research-scientist {
+        grid-row-start: 3;
+    
+        align-self: center;
+    
+        font-size: 1.7em;
+        font-weight: 900;
+        text-align: left;
+    }
+    
+    .skills-container {
+        grid-column-start: 2;
+        grid-row-start: 3;
+        margin-top: 50px;
+    
+        font-weight: 900;
+        font-size: 1.1em;
+    }
+    
+    .social-icons {
+        grid-column-start: 2;
+        grid-row-start: 3;
+    
+        margin-top: 50px;
+        font-size: 1.5em;
+        font-weight: bold;
 
-#i-am {
-    grid-row-start: 1;
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+    }
+    
+    .social {
+        height: 50px;
+        width: 50px;
 
-    align-self: center;
+        align-self: center;
+        justify-self: center;
+    }
 
-    font-size: 12em;
-    font-weight: 900;
-    text-align: left;
-}
-
-#headshot {
-    height: 140px;
-    width: 135px;
-}
-
-#a-developer {
-    grid-row-start: 2;
-
-    align-self: center;
-
-    font-size: 5em;
-    font-weight: 900;
-    text-align: left;
-}
-
-#research-scientist {
-    grid-row-start: 3;
-
-    align-self: center;
-    padding-top: 30px;
-
-    font-size: 4em;
-    font-weight: 900;
-    text-align: left;
-}
-
-.skills-container {
-    grid-column-start: 2;
-    grid-row-start: 3;
-    margin-top: 50px;
-
-    font-weight: 900;
-    font-size: 1.1em;
-}
-
-.social-icons {
-    grid-column-start: 3;
-    grid-row-start: 2;
-
-    align-self: center;
-    margin-left: -100px;
-    margin-top: 50px;
-    font-size: 1.5em;
-    font-weight: bold;
-}
-
-.social {
-    height: 100px;
-    width: 100px;
-}
-
-.social:hover {cursor: grab;}
-
-.social:active {
-    cursor: grabbing;
+    #social1{ grid-column-start: 1; }
+    #social2{ grid-column-start: 2; }
+    #social3{ grid-column-start: 3; }
+    
+    .social:hover {cursor: grab;}
+    
+    .social:active {
+        cursor: grabbing;
+    }
 }

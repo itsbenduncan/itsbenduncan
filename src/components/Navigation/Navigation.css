@@ -1,98 +1,220 @@
-.nav-container {
-    grid-row-start: 1;
-    position: fixed;
+/* 
+Needs a media query to mobile verson at 800px width
+*/
 
-    font-family: 'Nunito', sans-serif;
-    top: 0px;
-    width: 100%;
-    height: 150px;
+@media only screen and (min-width: 800px) {
+    .nav-container {
+        grid-row-start: 1;
+        position: fixed;
 
-    display: grid;
-    grid-template-columns: 25% 75%;
-    grid-template-rows: 10% 80% 10%;
+        font-family: 'Nunito', sans-serif;
+        top: 0px;
+        width: 100%;
+        height: 150px;
 
-    background-color: transparent;
+        display: grid;
+        grid-template-columns: 40% 60%;
+        grid-template-rows: 10% 80% 10%;
+
+        background-color: transparent;
+    }
+
+    .logo-container {
+        grid-column-start: 1;
+        grid-row-start: 2;
+
+        display: grid;
+        grid-template-columns: 30% 70%;
+        grid-template-rows: auto auto auto;
+    }
+
+    .logo {
+        grid-column-start: 1;
+        grid-row-start: 2;
+
+        margin-left: 45px;
+        align-self: center;
+        justify-self: right;
+
+        font-size: 5em;
+        font-weight: 900;
+    }
+
+    .logo-name {
+        grid-column-start: 2;
+        grid-row-start: 2;
+        font-size: 2em;
+        top: auto;
+        /* margin-left: -30px; */
+        bottom: auto;
+        justify-self: left;
+        align-self: center;
+    }
+
+    .buttons {
+        grid-column-start: 2;
+        grid-row-start: 2;
+        align-items: center;
+        justify-self: right;
+
+        display: grid;
+        grid-template-columns: 100px 50px 100px 50px 100px 50px;
+        grid-template-rows: 10% 80% 10%;
+    }
+
+    #nav-button1 { grid-column-start: 1; }
+
+    #nav-button2 { grid-column-start: 3; }
+
+    #nav-button3 { grid-column-start: 5; }
+
+    .nav-button-style {
+        grid-row-start: 2;
+        justify-self: center;
+        align-self: center;
+
+        background-color: transparent;
+        border-width: 2px;
+        border-image: linear-gradient(90deg, #00C0FF 0%, #FFCF00 49%, #FC4F4F 80%, #00C0FF 100%);
+        border-image-slice: 1;
+        height: 50px;
+        width: 125px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        font-size: 1.5em;
+        font-weight: 900;
+    }
+
+    .nav-button-style:focus {outline:0;}
+
+    .nav-button-style:hover {cursor: grab;}
+
+    .nav-button-style:active {
+        cursor: grabbing;
+        background-image: linear-gradient(90deg, #00C0FF 0%, #FFCF00 49%, #FC4F4F 80%, #00C0FF 100%);
+        color: whitesmoke;
+    }
+
+    .mobile-nav {
+        display: none;
+    }
 }
 
-.logo-container {
-    grid-column-start: 1;
-    grid-row-start: 2;
+/*
+*****************************************
+*   EVERYTHING BELOW IS FOR MOBILE NAV  *
+*****************************************
+*/
 
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: auto auto auto;
-}
+@media only screen and (max-width: 800px) {
 
-.logo {
-    grid-column-start: 1;
-    grid-row-start: 2;
+    .nav-container {
+        grid-row-start: 1;
+        top: 0px;
+        height: 200px;
+        position: fixed;
 
-    margin-left: 45px;
-    align-self: center;
+        
+        display: grid;
+        grid-template-rows: 50% 50%;
+        width: 100%;
+        
+        font-family: 'Nunito', sans-serif;
+    }
 
-    font-size: 5em;
-    font-weight: 900;
-}
+    .logo-container {
+        grid-row-start: 1;
 
-.logo-name {
-    grid-column-start: 2;
-    grid-row-start: 2;
-    font-size: 2em;
-    top: auto;
-    margin-left: -30px;
-    bottom: auto;
-    justify-self: center;
-    align-self: center;
-}
+        display: grid;
+        grid-template-columns: 30% 70%;
+        grid-template-rows: 10% 80% 10%;
+        width: 100%;
+    }
 
-.buttons {
-    grid-column-start: 2;
-    grid-row-start: 2;
-    align-items: center;
-    justify-self: right;
+    .logo {
+        grid-column-start: 1;
+        grid-row-start: 2;
+        align-self: center;
+        justify-self: right;
+        margin-top: 25px;
 
-    display: grid;
-    grid-template-columns: 100px 50px 100px 50px 100px 50px;
-    grid-template-rows: 10% 80% 10%;
-}
+        font-size: 5em;
+        font-weight: 900;
+    }
 
-#nav-button1 {
-    grid-column-start: 1;
-}
+    .logo-name {
+        grid-column-start: 2;
+        grid-row-start: 2;
+        justify-self: left;
+        align-self: center;
+        margin-top: 25px;
 
-#nav-button2 {
-    grid-column-start: 3;
-}
+        font-size: 2.5em;
+        /* font-weight: bold; */
+    }
 
-#nav-button3 {
-    grid-column-start: 5;
-}
+    .mobile-nav {
+        display: none;
+        grid-row-start: 3;
+        justify-self: center;
+        align-self: center;
 
-.nav-button-style {
-    grid-row-start: 2;
-    justify-self: center;
-    align-self: center;
+        background-color: white;
+        width: 100px;
+        height: 200px;
+    }
 
-    background-color: transparent;
-    border-width: 2px;
-    border-image: linear-gradient(90deg, #00C0FF 0%, #FFCF00 49%, #FC4F4F 80%, #00C0FF 100%);
-    border-image-slice: 1;
-    height: 50px;
-    width: 125px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    .buttons {
+        grid-row-start: 2;
+        align-self: center;
+        align-items: center;
+        justify-self: center;
+        justify-items: center;
+        width: 100%;
 
-    font-size: 1.5em;
-    font-weight: 900;
-}
+        display: grid;
+        grid-template-rows: 33% 33% 33%;
+        grid-gap: 10px;
+    }
 
-.nav-button-style:focus {outline:0;}
+    #nav-button1 { grid-row-start: 1; }
 
-.nav-button-style:hover {cursor: grab;}
+    #nav-button2 { grid-row-start: 2; }
 
-.nav-button-style:active {
-    cursor: grabbing;
-    background-image: linear-gradient(90deg, #00C0FF 0%, #FFCF00 49%, #FC4F4F 80%, #00C0FF 100%);
-    color: whitesmoke;
+    #nav-button3 { grid-row-start: 3; }
+
+    .nav-button-style {
+        grid-row-start: 2;
+        justify-self: center;
+        align-self: center;
+
+        background-color: transparent;
+        border-width: 2px;
+        border-image: linear-gradient(90deg, #00C0FF 0%, #FFCF00 49%, #FC4F4F 80%, #00C0FF 100%);
+        border-image-slice: 1;
+        height: 30px;
+        width: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        font-size: 1em;
+        font-weight: 900;
+    }
+
+    .nav-button-style:focus {outline:0;}
+
+    .nav-button-style:hover {cursor: grab;}
+
+    .nav-button-style:active {
+        cursor: grabbing;
+        background-image: linear-gradient(90deg, #00C0FF 0%, #FFCF00 49%, #FC4F4F 80%, #00C0FF 100%);
+        color: whitesmoke;
+    }
+
+    .mobile-nav {
+        display: none;
+    }
 }
