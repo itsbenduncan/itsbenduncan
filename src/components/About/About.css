@@ -11,14 +11,19 @@ Then needs smaller query for mobile format
         /* border-top: 2px solid grey; */
 
         display: grid;
-        grid-template-columns: 25% 50% 15% 10%;
-        grid-template-rows: 20% 75% 5%;
+        grid-template-columns: 10% 80% 10%;
+        grid-template-rows: 5% 70% 20% 5%;
     }
 
     .big-words {
         grid-row-start: 2;
         grid-column-start: 2;
 
+        align-self: center;
+        justify-self: center;
+        justify-items: center;
+        width: 100%;
+        
         display: grid;
         grid-template-rows: 60% 20% 20%;
     }
@@ -42,6 +47,7 @@ Then needs smaller query for mobile format
         grid-row-start: 2;
 
         align-self: center;
+        margin-top: -40px;
 
         font-size: 5em;
         font-weight: 900;
@@ -52,7 +58,7 @@ Then needs smaller query for mobile format
         grid-row-start: 3;
 
         align-self: center;
-        padding-top: 30px;
+        margin-top: -20px;
 
         font-size: 4em;
         font-weight: 900;
@@ -68,21 +74,44 @@ Then needs smaller query for mobile format
         font-size: 1.1em;
     }
 
-    .social-icons {
-        grid-column-start: 3;
-        grid-row-start: 2;
+    .horizontal-line {
+        background-color: #222831;
+        height: 2px;
+        width: 50vw;
+        grid-column-start: 2;
+        grid-row-start: 3;
+        justify-self: center;
+        /* align-self: center; */
+    }
 
+    .social-icons {
+        grid-column-start: 2;
+        grid-row-start: 3;
+        width: 100%;
+        justify-self: center;
         align-self: center;
-        margin-left: -100px;
-        margin-top: 50px;
+
+        margin-top: 100px;
+        margin-left: 20px;
         font-size: 1.5em;
         font-weight: bold;
+
+        justify-items: center;
+        display: grid;
+        grid-template-columns: 25% 15% 15% 15% 25%;
     }
 
     .social {
         height: 100px;
         width: 100px;
+
+        align-self: center;
+        justify-self: center;
     }
+
+    #social1{ grid-column-start: 2; }
+    #social2{ grid-column-start: 3; }
+    #social3{ grid-column-start: 4; }
 
     .social:hover {cursor: grab;}
 
