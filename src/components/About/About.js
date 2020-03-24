@@ -58,10 +58,10 @@ const About = () => {
                     </a>    
             </motion.div>
 
-            <div className="arrow">
+            {/* <div className="arrow">
             learn more <br />
                 ⬇
-            </div>
+            </div> */}
 
 
 
