@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import benduncan from './benduncan.jpeg';
 import twitter from './twitter.png';
 import github from './github.png';
-import instagram from './instagram.png';
+import linkedin from './linkedin.png';
 
 const About = () => {
     return (
@@ -47,19 +47,25 @@ const About = () => {
                 // animate={{ opacity: 1 }}
                 animate={{ scaleX: [0, 1] }}
                 transition={{ delay: 3.25, duration: .5 }} >
-                    <a href="https://twitter.com/itsbenduncan" className="social" id="social1" target="_blank">
+                    <a href="https://twitter.com/itsbenduncan" className="social" id="social1" target="_blank" rel="noopener noreferrer">
                         <img src={ twitter } alt="twitter icon" className="social" id="social1"></img>
+                    </a>
+                    <a href="https://github.com/itsbenduncan" className="social" id="social2" target="_blank" rel="noopener noreferrer">
+                        <img src={ github } alt="github icon" className="social" id="social2"></img>
+                    </a>
+                    <a href="https://linkedin.com/in/itsbenduncan" className="social" id="social3" target="_blank" rel="noopener noreferrer">
+                        <img src={ linkedin } alt="linkedin icon" className="social" id="social3"></img>
                     </a>    
-                    <img src={ github } alt="github icon" className="social" id="social2"></img>
-                    <img src={ instagram } alt="instagram icon" className="social" id="social3"></img>
             </motion.div>
 
-            {/* <motion.div className="skills-container"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 3.25, duration: .5 }} >
-                    let skills = [ HTML, CSS, Javascript, Python, React, MATLAB, PostgresQL ]
-            </motion.div> */}
+            <div className="arrow">
+            learn more <br />
+                ⬇
+            </div>
+
+
+
+
         </div>
     )
 }

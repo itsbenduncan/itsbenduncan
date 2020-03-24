@@ -65,15 +65,6 @@ Then needs smaller query for mobile format
         text-align: left;
     }
 
-    .skills-container {
-        grid-column-start: 2;
-        grid-row-start: 3;
-        margin-top: 50px;
-
-        font-weight: 900;
-        font-size: 1.1em;
-    }
-
     .horizontal-line {
         background-color: #222831;
         height: 2px;
@@ -118,6 +109,18 @@ Then needs smaller query for mobile format
     .social:active {
         cursor: grabbing;
     }
+
+    .arrow {
+        font-size: 3em;
+        grid-row-start: 3;
+        grid-column-start: 2;
+
+        position: absolute;
+        width: 100%;
+        top: 80%;
+        text-align: center;
+    }
+
 }
 
 /*
@@ -183,13 +186,14 @@ Then needs smaller query for mobile format
         text-align: left;
     }
     
-    .skills-container {
+    .horizontal-line {
+        background-color: #222831;
+        height: 2px;
+        width: 70vw;
         grid-column-start: 2;
         grid-row-start: 3;
-        margin-top: 50px;
-    
-        font-weight: 900;
-        font-size: 1.1em;
+        justify-self: center;
+        /* align-self: center; */
     }
     
     .social-icons {
@@ -220,5 +224,16 @@ Then needs smaller query for mobile format
     
     .social:active {
         cursor: grabbing;
+    }
+
+    .arrow {
+        font-size: 1em;
+        grid-row-start: 3;
+        grid-column-start: 2;
+
+        position: absolute;
+        width: 100%;
+        top: 90%;
+        text-align: center;
     }
 }
