@@ -11,8 +11,7 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      input: '',
-      route: 'About',
+      route: 'About'
     }
   }
 
@@ -23,6 +22,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <Navigation 
+          onRouteChange={this.onRouteChange} 
+        />
         { this.state.route === 'About'
           ? <About onRouteChange={this.onRouteChange} />
           :  this.state.route === 'Blog'
@@ -33,9 +35,6 @@ class App extends Component {
             </div>
           )
         }
-        <Navigation 
-          onRouteChange={this.onRouteChange} 
-        />
       </div>
     );
   }

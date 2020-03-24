@@ -1,12 +1,10 @@
 import React from 'react';
 import './Blog.css';
 
-const Blog = ({ searchChange }) => {
+const Blog = () => {
     return (
-        <div>
-            <h1 className="coming-soon">
-                Coming Soon!
-            </h1>
+        <div className="blog-container">
+            <div className="coming-soon">Coming Soon!</div>
         </div>
     )
 }
