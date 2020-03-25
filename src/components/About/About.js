@@ -8,7 +8,10 @@ import linkedin from './img/linkedin.png';
 
 const About = () => {
     return (
-        <div className="about-page">
+        <motion.div className="about-page"
+            animate={{ y: [0, -5, 0, -5, 0] }}
+            transition={{ delay: 4, duration: 1 }} >
+
             <div className="main-container">
                 <div className="big-words">
                     <motion.div id="i-am"
@@ -50,13 +53,25 @@ const About = () => {
                         </a>
                         <a href="https://linkedin.com/in/itsbenduncan" className="social" id="social3" target="_blank" rel="noopener noreferrer">
                             <img src={ linkedin } alt="linkedin icon" className="social" id="social3"></img>
-                        </a>    
+                        </a>
+                </motion.div>
+                <motion.div className="down-arrow"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: [1, 0] }}
+                transition={{ delay: 4, duration: 2 }} >
+                    <span role="img" aria-label="backhand index finger pointing down">
+                    &#128071;
+                    </span>
                 </motion.div>
             </div>
-            {/* <div className="second-block-container">
-                this is a test
-            </div> */}
-        </div>
+            <div className="second-block-container">
+                <div className="resume">
+                    <a href="https://itsbenduncan.github.io/resume/" target="_blank" rel="noopener noreferrer">
+                        RESUME
+                    </a>
+                </div>
+            </div>
+        </motion.div>
     )
 }
 

@@ -80,7 +80,7 @@ Then needs smaller query for mobile format
         font-size: 1.5em;
         font-weight: bold;
 
-        justify-items: center;
+        justify-content: center;
         display: grid;
         grid-template-columns: 25% 15% 15% 15% 25%;
     }
@@ -103,11 +103,52 @@ Then needs smaller query for mobile format
         cursor: grabbing;
     }
 
+    .down-arrow {
+        width: 100vw;
+        height: 50px;
+
+        font-size: 4em;
+        text-align: center;
+        margin-top: 50px;
+    }
+
     .second-block-container {
         display: flex;
         height: 100vh;
         width: 100vw;
+
+        scroll-snap-type: y mandatory;
+
+        justify-content: center;
+        align-content: center;
     }
+
+    .resume {
+        border: 2px solid #222831;;
+        width: auto;
+        height: auto;
+        padding: 10px;
+
+        font-size: 5em;
+
+        display: flex;
+        align-self: center;
+        justify-content: center;
+    }
+
+    .resume:hover {cursor: grab; font-size: 5.1em; }
+
+    .resume:focus {outline:0;}
+
+    .resume:active {
+        cursor: grabbing;
+        border-image: linear-gradient(90deg, #00C0FF 0%, #FFCF00 49%, #FC4F4F 80%, #00C0FF 100%);
+        border-image-slice: 1;
+    }
+
+    a { text-decoration: none; }
+
+    a:hover { cursor: grab; }
 
 }
 
@@ -124,7 +165,7 @@ Then needs smaller query for mobile format
     }
 
     .main-container {
-        height: calc(100vh - 200px);
+        height: calc(100vh - 300px);
         width: 100vw;
 
         display: flex;
@@ -217,10 +258,51 @@ Then needs smaller query for mobile format
         cursor: grabbing;
     }
 
+    .down-arrow {
+        width: 100vw;
+        height: 50px;
+
+        font-size: 2em;
+        text-align: center;
+        margin-top: 50px;
+    }
+
     .second-block-container {
         display: flex;
         height: 100vh;
         width: 100vw;
+
+        scroll-snap-type: y mandatory;
+
+        justify-content: center;
+        align-content: center;
     }
+
+    .resume {
+        border: 2px solid #222831;;
+        width: auto;
+        height: auto;
+        padding: 10px;
+
+        font-size: 3em;
+
+        display: flex;
+        align-self: center;
+        justify-content: center;
+    }
+
+    .resume:hover {cursor: grab; font-size: 5.1em; }
+
+    .resume:focus {outline:0;}
+
+    .resume:active {
+        cursor: grabbing;
+        border-image: linear-gradient(90deg, #00C0FF 0%, #FFCF00 49%, #FC4F4F 80%, #00C0FF 100%);
+        border-image-slice: 1;
+    }
+
+    a { text-decoration: none; }
+
+    a:hover { cursor: grab; }
 
 }
