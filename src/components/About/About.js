@@ -1,13 +1,53 @@
 import React from 'react';
 import './About.css';
-import { motion } from 'framer-motion';
+import { motion, useTransform, useViewportScroll } from 'framer-motion';
 import benduncan from './img/benduncan.jpeg';
 import twitter from './img/twitter.png';
 import github from './img/github.png';
 import linkedin from './img/linkedin.png';
 
 const About = () => {
+
+    const { scrollYProgress } = useViewportScroll();
+    const initial = useTransform(scrollYProgress, x => x + 0.05);
+    scrollYProgress.onChange(console.trace);
+
+
     return (
+    
+        <article style={{ position: "relative" }}>
+            <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 5 }} >
+                <motion.div
+                    style={{
+                        width: 2,
+                        height: 300,
+                        background: "#222831",
+                        position: "fixed",
+                        top: "25%",
+                        left: 12,
+                        right: 0,
+                        scaleY: initial,
+                        originY: 0
+                    }}
+                ></motion.div>
+                <motion.div
+                    style={{
+                        width: 2,
+                        height: 300,
+                        background: `rgba(0,0,0,.02)`,
+                        position: "fixed",
+                        top: "25%",
+                        left: 12,
+                        right: 0,
+                        scaleY: 1,
+                        originY: 0
+                    }}
+                ></motion.div>
+            </motion.div>
+
         <motion.div className="about-page"
             animate={{ y: [0, -5, 0, -5, 0] }}
             transition={{ delay: 4, duration: 1 }} >
@@ -64,6 +104,7 @@ const About = () => {
                     </span>
                 </motion.div>
             </div>
+            </motion.div>
             <div className="second-block-container">
                 <div className="resume">
                     <a href="https://itsbenduncan.github.io/resume/" target="_blank" rel="noopener noreferrer">
@@ -71,7 +112,7 @@ const About = () => {
                     </a>
                 </div>
             </div>
-        </motion.div>
+        </article>
     )
 }
 
