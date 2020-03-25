@@ -4,12 +4,9 @@ Needs a media query to mobile verson at 800px width
 
 @media only screen and (min-width: 800px) {
     .nav-container {
-        grid-row-start: 1;
-        position: fixed;
-
         font-family: 'Nunito', sans-serif;
         top: 0px;
-        width: 100%;
+        width: 100vw;
         height: 150px;
 
         display: grid;
@@ -111,79 +108,44 @@ Needs a media query to mobile verson at 800px width
 @media only screen and (max-width: 800px) {
 
     .nav-container {
-        grid-row-start: 1;
         top: 0px;
         height: 200px;
-        position: fixed;
-
         
-        display: grid;
-        grid-template-rows: 50% 50%;
-        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100vw;
         
         font-family: 'Nunito', sans-serif;
     }
 
     .logo-container {
-        grid-row-start: 1;
+        display: flex;
+        align-content: center;
+        justify-content: center;
 
-        display: grid;
-        grid-template-columns: 30% 70%;
-        grid-template-rows: 10% 80% 10%;
         width: 100%;
     }
 
     .logo {
-        grid-column-start: 1;
-        grid-row-start: 2;
-        align-self: center;
-        justify-self: right;
-        margin-top: 25px;
-
         font-size: 5em;
         font-weight: 900;
     }
 
     .logo-name {
-        grid-column-start: 2;
-        grid-row-start: 2;
-        justify-self: left;
-        align-self: center;
-        margin-top: 25px;
+        margin-top: 32px;
 
         font-size: 2.5em;
-        /* font-weight: bold; */
-    }
-
-    .mobile-nav {
-        display: none;
-        grid-row-start: 3;
-        justify-self: center;
-        align-self: center;
-
-        background-color: white;
-        width: 100px;
-        height: 200px;
     }
 
     .buttons {
-        grid-row-start: 2;
-        align-self: center;
-        align-items: center;
-        justify-self: center;
-        justify-items: center;
-        width: 100%;
+        justify-content: center;
+        align-content: center;
+        width: 100vw;
 
         display: grid;
         grid-template-rows: 33% 33% 33%;
         grid-gap: 10px;
     }
-
-    #nav-button1 { grid-row-start: 1; }
-
-    #nav-button2 { grid-row-start: 2; }
-
-    #nav-button3 { grid-row-start: 3; }
 
     .nav-button-style {
         grid-row-start: 2;

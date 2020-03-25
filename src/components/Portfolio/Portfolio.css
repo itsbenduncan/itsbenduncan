@@ -4,16 +4,16 @@ Needs media query at 800px width into mobile format
 
 @media only screen and (min-width: 800px) {
     .portfolio-container {
-        grid-row-start: 2;
-        margin-top: 175px;
         background-color: transparent;
         
-        display: grid;
-        grid-template-columns: 40% 20% 40%;
-    }
+        display: flex;
+        flex-wrap: wrap;
 
-    #card1 {
-        grid-column-start: 2;
+        justify-content: center;
+        align-content: center;
+
+        height: calc(100vh - 150px);
+        width: 100vw;
     }
 
     .portfolio-card-style {
@@ -77,18 +77,16 @@ Needs media query at 800px width into mobile format
 
 @media only screen and (max-width: 800px) {
     .portfolio-container {
-        grid-row-start: 2;
-        margin-top: 300px;
         background-color: transparent;
         
-        display: grid;
-        grid-template-columns: 5% 90% 5%;
-    }
+        display: flex;
+        flex-wrap: wrap;
 
-    #card1 {
-        grid-column-start: 2;
-        align-self: center;
-        justify-self: center;
+        justify-content: center;
+        align-content: center;
+
+        height: calc(100vh - 200px);
+        width: 100vw;
     }
 
     .portfolio-card-style {

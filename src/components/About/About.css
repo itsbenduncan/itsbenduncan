@@ -4,38 +4,40 @@ Then needs smaller query for mobile format
 */
 
 @media only screen and (min-width: 800px) {
-    .about-container {
-        grid-row-start: 2;
-        margin-top: 175px;
-        background-color: transparent;
-        /* border-top: 2px solid grey; */
+    .about-page {
+        display: flex;
+        flex-wrap: wrap;
+    }
 
-        display: grid;
-        grid-template-columns: 10% 80% 10%;
-        grid-template-rows: 5% 70% 20% 5%;
+    .main-container {
+        height: calc(100vh - 150px);
+        width: 100vw;
+
+        display: flex;
+        flex-wrap: wrap;
+
+        align-content: center;
+        justify-content: center;
     }
 
     .big-words {
-        grid-row-start: 2;
-        grid-column-start: 2;
-
-        align-self: center;
         justify-self: center;
         justify-items: center;
         width: 100%;
-        
-        display: grid;
-        grid-template-rows: 60% 20% 20%;
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     #i-am {
-        grid-row-start: 1;
-
-        align-self: center;
+        align-self: flex-end;
 
         font-size: 12em;
         font-weight: 900;
         text-align: left;
+
+        margin-bottom: -20px;
     }
 
     #headshot {
@@ -46,44 +48,35 @@ Then needs smaller query for mobile format
     #a-developer {
         grid-row-start: 2;
 
-        align-self: center;
-        margin-top: -40px;
+        align-self: flex-start;
+        margin-top: -20px;
 
         font-size: 5em;
         font-weight: 900;
-        text-align: left;
+        text-align: center;
+        width: 100%;
     }
 
     #research-scientist {
-        grid-row-start: 3;
-
-        align-self: center;
-        margin-top: -20px;
+        width: 100%;
 
         font-size: 4em;
         font-weight: 900;
-        text-align: left;
+        text-align: center;
     }
 
     .horizontal-line {
         background-color: #222831;
         height: 2px;
         width: 50vw;
-        grid-column-start: 2;
-        grid-row-start: 3;
-        justify-self: center;
-        /* align-self: center; */
+        margin-top: 20px;
     }
 
     .social-icons {
-        grid-column-start: 2;
-        grid-row-start: 3;
-        width: 100%;
-        justify-self: center;
-        align-self: center;
+        width: 100vw;
 
-        margin-top: 100px;
-        margin-left: 20px;
+        margin-top: 20px;
+
         font-size: 1.5em;
         font-weight: bold;
 
@@ -110,15 +103,10 @@ Then needs smaller query for mobile format
         cursor: grabbing;
     }
 
-    .arrow {
-        font-size: 3em;
-        grid-row-start: 3;
-        grid-column-start: 2;
-
-        position: absolute;
-        width: 100%;
-        top: 80%;
-        text-align: center;
+    .second-block-container {
+        display: flex;
+        height: 100vh;
+        width: 100vw;
     }
 
 }
@@ -130,84 +118,87 @@ Then needs smaller query for mobile format
 */
 
 @media only screen and (max-width: 800px) {
-    .about-container {
-        grid-row-start: 2;
-        margin-top: 225px;
-        background-color: transparent;
-        /* border-top: 2px solid grey; */
-    
-        display: grid;
-        grid-template-columns: 5% 90% 5%;
-        grid-template-rows: 5% 70% 20% 5%;
+    .about-page {
+        display: flex;
+        flex-wrap: wrap;
     }
-    
+
+    .main-container {
+        height: calc(100vh - 200px);
+        width: 100vw;
+
+        display: flex;
+        flex-wrap: wrap;
+
+        align-content: center;
+        justify-content: center;
+    }
+
     .big-words {
-        grid-row-start: 2;
-        grid-column-start: 2;
         justify-self: center;
-        align-self: center;
-    
-        display: grid;
-        grid-template-rows: 60% 20% 20%;
+        justify-items: center;
+        width: 100%;
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
     }
-    
+
     #i-am {
-        grid-row-start: 1;
-    
-        align-self: center;
-    
+        align-self: flex-end;
+
         font-size: 5em;
         font-weight: 900;
         text-align: left;
+
+        margin-bottom: -15px;
     }
-    
+
     #headshot {
         height: 60px;
         width: 58px;
     }
-    
+
     #a-developer {
         grid-row-start: 2;
-    
-        align-self: center;
-    
+
+        align-self: flex-start;
+        /* margin-top: -20px; */
+
         font-size: 2.12em;
         font-weight: 900;
-        text-align: left;
+        text-align: center;
+        width: 100%;
     }
-    
+
     #research-scientist {
-        grid-row-start: 3;
-    
-        align-self: center;
-    
+        width: 100%;
+
         font-size: 1.7em;
         font-weight: 900;
-        text-align: left;
+        text-align: center;
     }
-    
+
     .horizontal-line {
         background-color: #222831;
         height: 2px;
         width: 70vw;
-        grid-column-start: 2;
-        grid-row-start: 3;
-        justify-self: center;
-        /* align-self: center; */
+        margin-top: 20px;
     }
-    
+
     .social-icons {
-        grid-column-start: 2;
-        grid-row-start: 3;
-    
-        margin-top: 50px;
+        width: 100vw;
+
+        margin-top: 20px;
+
         font-size: 1.5em;
         font-weight: bold;
 
+        justify-items: center;
         display: grid;
-        grid-template-columns: 33% 33% 33%;
+        grid-template-columns: 25% 15% 15% 15% 25%;
     }
-    
+
     .social {
         height: 50px;
         width: 50px;
@@ -216,24 +207,20 @@ Then needs smaller query for mobile format
         justify-self: center;
     }
 
-    #social1{ grid-column-start: 1; }
-    #social2{ grid-column-start: 2; }
-    #social3{ grid-column-start: 3; }
-    
+    #social1{ grid-column-start: 2; }
+    #social2{ grid-column-start: 3; }
+    #social3{ grid-column-start: 4; }
+
     .social:hover {cursor: grab;}
-    
+
     .social:active {
         cursor: grabbing;
     }
 
-    .arrow {
-        font-size: 1em;
-        grid-row-start: 3;
-        grid-column-start: 2;
-
-        position: absolute;
-        width: 100%;
-        top: 90%;
-        text-align: center;
+    .second-block-container {
+        display: flex;
+        height: 100vh;
+        width: 100vw;
     }
+
 }

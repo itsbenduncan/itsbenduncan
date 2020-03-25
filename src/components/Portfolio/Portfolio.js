@@ -6,7 +6,7 @@ import brain from './brain.png';
 const Portfolio = () => {
     return (
         <div className="portfolio-container">
-            <div id="card1" className="portfolio-card-style">
+            <div className="portfolio-card-style">
                 <img src={ brain } alt="brain icon" className="portfolio-card-img"></img>
                     <a href="http://itsbenduncan-face-recognition.herokuapp.com/">
                         <div className="portfolio-card-bottom">

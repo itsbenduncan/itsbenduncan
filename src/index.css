@@ -3,10 +3,23 @@ body, html {
   font-family: 'Raleway', sans-serif;
   /* font-family: 'Nunito', sans-serif; */
 
-  display: grid;
-  grid-template-rows: 150px auto;
+  display: flex;
   background-image: url("nav-background.png");
   background-size: 100%;
   background-repeat: repeat-y;
   color: #222831;
+}
+
+@media only screen and (max-width: 800px) {
+  body, html {
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    /* font-family: 'Nunito', sans-serif; */
+  
+    display: flex;
+    background-image: url("nav-background.png");
+    background-size: 100%;
+    background-repeat: repeat-y;
+    color: #222831;
+  }
 }
