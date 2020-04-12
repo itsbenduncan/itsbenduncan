@@ -1,7 +1,25 @@
-.test {
-    height: 250px;
-    width: 250px;
+.portraits-gallery-container {
+    height: 90vh;
+    width: 100vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.portraits-gallery {
+    width: 75vw;
+    height: auto;
+
+    display: flex;
+    flex-wrap: wrap;
+    overflow: scroll;
+    justify-content: center;
+}
+
+.portraits-thumbnail {
+    height: 100px;
+    margin: 20px;
+    padding: 5px;
     background-color: white;
-    margin-top: 100px;
-    margin-left: 100px;
 }

@@ -1,6 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
 .contact-container {
-    height: 50vh;
+    height: 90vh;
     width: 100vw;
 
-    background-color: purple;
+    display: grid;
+    grid-template-rows: 35% 10% 55%;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+.contact-title {
+    grid-row-start: 2;
+    text-align: center;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 3em;
+}
+
+.contact-info {
+    grid-row-start: 3;
+    text-align: center;
+    align-self: flex-start;
+    justify-self: center;
+    width: 50%;
 }

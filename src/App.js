@@ -11,6 +11,8 @@ import './App.css';
 import About from './Components/About/About';
 import Contact from './Components/Contact/Contact';
 import Portraits from './Components/Gallery/Galleries/Portraits';
+import Couples from './Components/Gallery/Galleries/Couples';
+import Stills from './Components/Gallery/Galleries/Stills';
 
 class App extends Component {
 
@@ -52,9 +54,14 @@ class App extends Component {
                         Gallery
                         <ul id="submenu">
                           <li>
+                            <Link to="/couples">Couples</Link>
+                          </li>
+                          <li>
                             <Link to="/portraits">Portraits</Link>
                           </li>
-                          <li>Landscape</li>
+                          <li>
+                            <Link to="/stills">Stills</Link>
+                          </li>
                         </ul>
                       </li>
                       <li>
@@ -68,8 +75,14 @@ class App extends Component {
           </div>
 
           <Switch>
+            <Route path="/couples">
+                <Couples />
+            </Route>
             <Route path="/portraits">
                 <Portraits />
+            </Route>
+            <Route path="/stills">
+                <Stills />
             </Route>
             <Route path="/about">
               <About />
