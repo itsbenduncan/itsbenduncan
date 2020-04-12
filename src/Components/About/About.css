@@ -1,6 +1,13 @@
 .about-container {
-    height: 50vh;
+    height: 90vh;
     width: 100vw;
 
-    background-color: blue;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+img {
+    margin-top: 50px;
+    height: 200px;
 }

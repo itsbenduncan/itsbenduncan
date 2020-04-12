@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+.gallery-container {
+    height: 90vh;
+    width: 100vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+
+    width: 75vw;
+}
+
+.instant-frame {
+  height: 300px;
+  width: 250px;
+  
+  background-color: whitesmoke;
+  display: grid;
+  grid-template-rows: 85% 15%;
+  margin: 20px;
+}
+
+.image-placeholder {
+  background-color: black;
+  height: 225px;
+  width: 225px;
+  grid-row-start: 1;
+  justify-self: center;
+  align-self: center;
+  overflow: hidden;
+}
+
+img {
+  width: 100%;
+}
+
+.title {
+  grid-row-start: 2;
+  justify-self: center;
+  font-family: 'Permanent Marker', cursive;
+  font-size: 1em;
+  height: 100%;
+  align-self: center;
+  color: black;
+}

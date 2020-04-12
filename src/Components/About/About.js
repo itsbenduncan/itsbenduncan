@@ -1,10 +1,11 @@
 import React from 'react';
 import './About.css';
+import BenDuncan from './BenDuncan.jpg';
 
 const About = () => {
     return (
         <div className="about-container">
-            About
+            <img src={ BenDuncan } alt="Ben Duncan" />
         </div>
     )
 }

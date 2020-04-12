@@ -8,47 +8,79 @@ import {
   useParams
 } from "react-router-dom";
 import './App.css';
-import Navigation from './Components/Navigation/Navigation';
 import About from './Components/About/About';
 import Contact from './Components/Contact/Contact';
+import Portraits from './Components/Gallery/Galleries/Portraits';
 
 class App extends Component {
 
   constructor() {
     super();
     this.state = {
-    }
-  }
 
-  onRouteChange = (route) => {
-    this.setState({route: route});
+    }
   }
 
   render() {
     return (
+      <div className="app-container">
+        {/* <div className="main-wrapper">
+          <svg viewBox="0 0 25 100" id="top-left" preserveAspectRatio="xMinYMin">
+            <path d="M5 25,
+                      L5 5,
+                      Q5 1, 10 1
+                      L25 1"
+            stroke="orange" opacity="1" fill="black" />
+          </svg>
+          <svg viewBox="0 0 25 100" id="top-right" preserveAspectRatio="xMinYMin">
+            <path d="M0 5,
+             L20 5,
+             Q22 5, 22 10
+             L22, 25"
+              stroke="orange" opacity="1" fill="black" />
+          </svg>
+        </div> */}
       <Router>
         <div>
-          <ul>
-            <li>
-            </li>
-            <li>
-              <Link to="/about">About</Link>
-            </li>
-            <li>
-              <Link to="/contact">Contact</Link>
-            </li>
-          </ul>
+          <div className="navigation-container">
+            <div className="name">
+              <Link to="/">@itsbenduncan</Link>
+            </div>
+              <nav>
+                  <ul>
+                      <li>
+                        Gallery
+                        <ul id="submenu">
+                          <li>
+                            <Link to="/portraits">Portraits</Link>
+                          </li>
+                          <li>Landscape</li>
+                        </ul>
+                      </li>
+                      <li>
+                        <Link to="/about">About</Link>
+                      </li>
+                      <li>
+                        <Link to ="/contact">Contact</Link>
+                      </li>
+                  </ul>
+              </nav>
+          </div>
 
-        <Switch>
-          <Route path="/about">
-            <About />
-          </Route>
-          <Route path="/contact">
-            <Contact />
-          </Route>
-        </Switch>
+          <Switch>
+            <Route path="/portraits">
+                <Portraits />
+            </Route>
+            <Route path="/about">
+              <About />
+            </Route>
+            <Route path="/contact">
+              <Contact />
+            </Route>
+          </Switch>
+        </div>
+      </Router>
       </div>
-    </Router>
     );
   }
 }
