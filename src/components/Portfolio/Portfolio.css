@@ -19,6 +19,7 @@ Needs media query at 800px width into mobile format
     .portfolio-card-style {
         height: 300px;
         width: 250px;
+        margin: 20px;
 
         background-color: transparent;
         border: 2px solid grey;
@@ -41,6 +42,7 @@ Needs media query at 800px width into mobile format
         grid-row-start: 1;
         justify-self: center;
         align-self: center;
+        height: 100px;
     }
 
     .portfolio-card-bottom {
@@ -92,6 +94,7 @@ Needs media query at 800px width into mobile format
     .portfolio-card-style {
         height: 300px;
         width: 250px;
+        margin: 20px;
 
         background-color: transparent;
         border: 2px solid grey;
@@ -114,6 +117,7 @@ Needs media query at 800px width into mobile format
         grid-row-start: 1;
         justify-self: center;
         align-self: center;
+        height: 100px;
     }
 
     .portfolio-card-bottom {

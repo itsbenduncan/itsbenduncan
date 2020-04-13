@@ -48,10 +48,6 @@ const About = () => {
                 ></motion.div>
             </motion.div>
 
-        <motion.div className="about-page"
-            animate={{ y: [0, -5, 0, -5, 0] }}
-            transition={{ delay: 4, duration: 1 }} >
-
             <div className="main-container">
                 <div className="big-words">
                     <motion.div id="i-am"
@@ -95,21 +91,55 @@ const About = () => {
                             <img src={ linkedin } alt="linkedin icon" className="social" id="social3"></img>
                         </a>
                 </motion.div>
-                <motion.div className="down-arrow"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: [1, 0] }}
-                transition={{ delay: 4, duration: 2 }} >
-                    <span role="img" aria-label="backhand index finger pointing down">
-                    &#128071;
-                    </span>
-                </motion.div>
+                <a href="#resume" className="learn-more">learn more</a>
             </div>
-            </motion.div>
             <div className="second-block-container">
-                <div className="resume">
-                    <a href="https://itsbenduncan.github.io/resume/" target="_blank" rel="noopener noreferrer">
-                        RESUME
-                    </a>
+                <div className="about-info">
+                    <div>
+                        <h2>Who:</h2><br /> I am a 28 year old developer from Honolulu, HI. 
+                    </div>
+                    <div>
+                        <h2>What:</h2><br /> I work and study in Earth Sciences. I offer a range of expertise from web developmend and scientific programming with python,
+                        to photography and holding my FAA UAV license. 
+                        <br /><br />
+                    </div>
+                    <div>
+                        <h2>Skills</h2><br />
+                        <ul>
+                            <li>HTML 5, CSS 3, Javascript, Python, React, PostgresQL, Matlab</li>
+                            <li>Teamwork, communication, & remote work</li>
+                            <li>Time & project management</li>
+                            <li>Photography, filmmaking, & live production</li>
+                            <li>Customer orientated sales, technical training, & customer education</li>
+                            <li>Proficient in Japanese</li> 
+                            <li>Experience traveling, surfing, and outdoor work</li>
+                            <li>Expert in Final Cut Pro X, Apple products & software, Adobe software, & more</li>
+                        </ul>
+                    </div>
+                    <h1>
+                        itsbenduncan@gmail.com                    
+                    </h1>
+                </div>
+                <div id="resume" className="resume">
+                    <div className="resume-button">
+                        <a href="https://itsbenduncan.github.io/resume/" target="_blank" rel="noopener noreferrer">
+                            RESUME
+                        </a>
+                    </div>
+                    {/* <div className="skills">
+                        <h2 id="skills-title">Skills</h2>
+                        <ul id="skills-list">
+                            <li>HTML 5, CSS 3, Javascript, Python, React, PostgresQL, Matlab</li>
+                            <li>Teamwork, communication, & remote work</li>
+                            <li>Time & project management</li>
+                            <li>Photography, filmmaking, & live production</li>
+                            <li>Customer orientated sales, technical training, & customer education</li>
+                            <li>Proficient in Japanese</li> 
+                            <li>Experience traveling, surfing, and outdoor work</li>
+                            <li>Expert in Final Cut Pro X, Apple products & software, Adobe software, & more</li>
+                        </ul>
+                    </div> */}
+
                 </div>
             </div>
         </article>
