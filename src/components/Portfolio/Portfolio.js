@@ -1,6 +1,6 @@
 import React from 'react';
 import './Portfolio.css';
-import brain from './brain.png';
+import face from './face.png';
 import camera from './camera.png';
 import weather from './weather.png';
 // import { motion } from 'framer-motion';
@@ -9,7 +9,7 @@ const Portfolio = () => {
     return (
         <div className="portfolio-container">
             <div className="portfolio-card-style">
-                <img src={ brain } alt="brain icon" className="portfolio-card-img"></img>
+                <img src={ face } alt="face icon" className="portfolio-card-img"></img>
                     <a href="http://itsbenduncan-face-recognition.herokuapp.com/" target="_blank">
                         <div className="portfolio-card-bottom">
                             <span id="bottom-title">Face Recognition</span><br/>
