@@ -96,16 +96,26 @@ const About = () => {
             <div className="second-block-container">
                 <div className="about-info">
                     <div>
-                        <h2>Who:</h2><br /> I am a 28 year old developer from Honolulu, HI. 
+                        <h1 className="about-header">Who</h1>
+                        <br /> 
+                        <div className="about-content">
+                        Dynamic and efficient, I bring a breadth of multi-disciplinary knowledge themed in technology, 
+                        creating excellent problemsolving and team-orientated skills. 
+                        I am a self-driven programmer with a passion for the environment. <br />
+                        I am a 28 years old and based in Honolulu, HI. 
+                        </div>
                     </div>
                     <div>
-                        <h2>What:</h2><br /> I work and study in Earth Sciences. I offer a range of expertise from web developmend and scientific programming with python,
-                        to photography and holding my FAA UAV license. 
+                        <h1 className="about-header">What</h1>
+                        <br /> 
+                        I work and study in the field Earth Sciences and various forms of prgramming. I offer a range of expertise
+                        from web developmend and scientific programming with python,
+                        to photography and research science. 
                         <br /><br />
                     </div>
                     <div>
-                        <h2>Skills</h2><br />
-                        <ul>
+                        <h1 className="about-header">Skills</h1><br />
+                        <ul id="about-ul">
                             <li>HTML 5, CSS 3, Javascript, Python, React, PostgresQL, Matlab</li>
                             <li>Teamwork, communication, & remote work</li>
                             <li>Time & project management</li>
@@ -116,30 +126,14 @@ const About = () => {
                             <li>Expert in Final Cut Pro X, Apple products & software, Adobe software, & more</li>
                         </ul>
                     </div>
-                    <h1>
-                        itsbenduncan@gmail.com                    
-                    </h1>
-                </div>
-                <div id="resume" className="resume">
-                    <div className="resume-button">
-                        <a href="https://itsbenduncan.github.io/resume/" target="_blank" rel="noopener noreferrer">
-                            RESUME
-                        </a>
+                    <h1 className="about-header">itsbenduncan@gmail.com</h1>
+                    <div id="resume" className="resume">
+                        <div className="resume-button">
+                            <a href="https://itsbenduncan.github.io/resume/" target="_blank" rel="noopener noreferrer">
+                                RESUME
+                            </a>
+                        </div>
                     </div>
-                    {/* <div className="skills">
-                        <h2 id="skills-title">Skills</h2>
-                        <ul id="skills-list">
-                            <li>HTML 5, CSS 3, Javascript, Python, React, PostgresQL, Matlab</li>
-                            <li>Teamwork, communication, & remote work</li>
-                            <li>Time & project management</li>
-                            <li>Photography, filmmaking, & live production</li>
-                            <li>Customer orientated sales, technical training, & customer education</li>
-                            <li>Proficient in Japanese</li> 
-                            <li>Experience traveling, surfing, and outdoor work</li>
-                            <li>Expert in Final Cut Pro X, Apple products & software, Adobe software, & more</li>
-                        </ul>
-                    </div> */}
-
                 </div>
             </div>
         </article>

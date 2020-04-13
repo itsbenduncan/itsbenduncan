@@ -1,7 +1,7 @@
-/* 
+/* /* 
 Needs a media query to mobile verson at 800px width
 */
-
+/* 
 @media only screen and (min-width: 800px) {
     .nav-container {
         font-family: 'Nunito', sans-serif;
@@ -42,7 +42,7 @@ Needs a media query to mobile verson at 800px width
         grid-row-start: 2;
         font-size: 2em;
         top: auto;
-        /* margin-left: -30px; */
+        /* margin-left: -30px;
         bottom: auto;
         justify-self: left;
         align-self: center;
@@ -104,7 +104,7 @@ Needs a media query to mobile verson at 800px width
 *   EVERYTHING BELOW IS FOR MOBILE NAV  *
 *****************************************
 */
-
+/* 
 @media only screen and (max-width: 800px) {
 
     .nav-container {
@@ -179,4 +179,4 @@ Needs a media query to mobile verson at 800px width
     .mobile-nav {
         display: none;
     }
-}
+} */

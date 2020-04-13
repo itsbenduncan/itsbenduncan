@@ -1,5 +1,13 @@
 import React, { Component } from 'react';
 import './App.css';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  useRouteMatch,
+  useParams
+} from "react-router-dom";
 import Navigation from './components/Navigation/Navigation';
 import About from './components/About/About';
 import Blog from './components/Blog/Blog';
@@ -21,21 +29,45 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <Navigation 
-          onRouteChange={this.onRouteChange} 
-        />
-        { this.state.route === 'About'
-          ? <About onRouteChange={this.onRouteChange} />
-          :  this.state.route === 'Blog'
-          ? <Blog onRouteChange={this.onRouteChange} />
-          : ( this.state.route === 'Portfolio'
-            ? <Portfolio onRouteChange={this.onRouteChange} />
-            : <div>
+          <Router >
+            <div className="nav-container">
+              <div className="logo-container">
+                  <div className="logo">@</div>
+                  <Link className="logo-name" to="/">itsbenduncan</Link>
+              </div>
+              <nav>
+                  <ul className="nav-list">
+                      <li className="nav-list-item">
+                        <button className="nav-button-style">
+                          <Link to="/">about</Link>
+                        </button>
+                      </li>
+                      <li className="nav-list-item">
+                        <button className="nav-button-style">
+                          <Link to="/portfolio">portfolio</Link>
+                        </button>
+                      </li>
+                      <li className="nav-list-item">
+                        <button className="nav-button-style">
+                          <Link to="/blog">blog</Link>
+                        </button>
+                      </li>
+                  </ul>
+              </nav>
             </div>
-          )
-        }
-      </div>
+
+            <Switch>
+              <Route path="/portfolio">
+                <Portfolio />
+              </Route>
+              <Route path="/blog">
+                <Blog />
+              </Route>
+              <Route path="/">
+                <About />
+              </Route>
+            </Switch>
+        </Router>
     );
   }
 }
