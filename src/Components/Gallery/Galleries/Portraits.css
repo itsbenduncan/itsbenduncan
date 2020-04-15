@@ -1,25 +1,96 @@
-.portraits-gallery-container {
-    height: 90vh;
-    width: 100vw;
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+@media only screen and (min-width: 701px) {
+
+    .portraits-gallery-container {
+        height: 90vh;
+        width: 100vw;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .portraits-gallery {
+        width: 75vw;
+        height: auto;
+
+        display: flex;
+        flex-wrap: wrap;
+        overflow: scroll;
+        justify-content: center;
+    }
+
+    .portraits-thumbnail {
+        height: 100px;
+        margin: 20px;
+        padding: 5px;
+        background-color: white;
+    }
+
 }
 
-.portraits-gallery {
-    width: 75vw;
-    height: auto;
+@media only screen and (max-width: 700px) {
+    .portraits-gallery-container {
+        height: 90vh;
+        width: 100vw;
 
-    display: flex;
-    flex-wrap: wrap;
-    overflow: scroll;
-    justify-content: center;
-}
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
-.portraits-thumbnail {
-    height: 100px;
-    margin: 20px;
-    padding: 5px;
-    background-color: white;
+    .portraits-gallery {
+        width: 75vw;
+        height: auto;
+
+        display: flex;
+        flex-wrap: wrap;
+        overflow: scroll;
+        justify-content: center;
+    }
+
+    .portraits-thumbnail {
+        height: 100px;
+        width: 100px;
+
+        display: flex;
+        justify-content: center;
+
+        object-fit: cover;
+
+        border: 1px solid black;
+    }
+
+    .lightbox-container {
+        position: fixed;
+        height: 100%;
+        width: 100%;
+
+        background-color: black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1;
+    }
+
+    .lightbox-img {
+        width: 100%;
+        height: auto;
+        top: 50px;
+        position: absolute;
+    }
+
+    .close-button {
+        position: absolute;
+        top: 0px;
+        right: 25px;
+        background-color: black;
+        text-decoration: none;
+        color: orange;
+        font-weight: 900;
+
+        font-family: 'VT323', monospace;
+        font-size: 3em;
+    }
 }
